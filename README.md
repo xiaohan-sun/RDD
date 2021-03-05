@@ -20,8 +20,8 @@
 4. If people were capable of manipulating their blood alcohol content (bac1), describe the test we would use to check for this. 
 We can draw a histogram of the distribution of BAC to see whether people manipulate their blood alcohol content.
 
-    hist bac1, freq discrete
-    graph export hist_bac.png
+    quietly hist bac1, freq discrete
+    quietly graph export hist_bac.png
 
 ![Figure 1. BAC Distribution](hist_bac.png){width=100%}
 
