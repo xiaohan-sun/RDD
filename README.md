@@ -4,14 +4,13 @@
 
 2. In this paper, the author tests the effect of harsher punishments and sanctions on driving under the influence (DUI). For the data, he used the administrative records on 512,964 DUI stops from the state of Washington (WA) to determine the thresholds that determine both the current as well as potential future punishments for drunk drivers. To specific, in WA BAC measured above 0.08 is considered a DUI while a BAC above 0.15 is considered an aggravated DUI. In the paper, regression discontinuity approach is used to deliver consistent estimates. And the results suggest that the additional sanctions experienced by drunk drivers at BAC thresholds are effective in reducing repeat drunk driving. 
     
-    quietly clear
-
-    quietly cd ~/Desktop/CI_RDD
-
-    quietly use hansen_dwi, clear
+	quietly clear
+	quietly cd ~/Desktop/CI_RDD
+	quietly use hansen_dwi, clear
 
 
 3. Create a dummy equaling 1 if bac1>= 0.08 and 0 otherwise in your do file or R file.
+
 	quietly gen d = 2
 	quietly replace d = 1 if bac1>= 0.08
 	quietly replace d = 0 if bac1< 0.08
